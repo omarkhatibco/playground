@@ -4,10 +4,6 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    function({ addUtilities, addComponents, e, prefix, config }) {
-    // This function is your plugin
-    console.log(prefix)
-    console.log(config('theme', []))
-    },
+    require('tailwind-css-variables')({},{postcssEachVariables:true})
   ],
 }
